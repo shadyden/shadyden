@@ -1,0 +1,56 @@
+{
+    "_version": "1.43.01",
+    "sap.app": {
+        "id": "mah.srm.ers",
+        "type": "application",
+        "ach": "MAH-SRM-ER",
+        "applicationVersion": {
+            "version": "1.43.01"
+        },
+        "title": " {{appTitle}}",
+        "description": "{{appdesciption}}",
+        "i18n": "i18n/i18n.properties"
+    },
+    "sap.ui": {
+        "devicetype": {
+            "desktops": true,
+            "phone": true,
+            "tablet": true
+        },
+        "supportedThemes": [
+            "sap_fiori_3",
+            "sap_fiori_3_dark"
+        ],
+        "fullwidth": true,
+        "tecnology": "UI5"
+    },
+    "sap.ui5": {
+        "dependencies": {
+            "minUI5Version": "1.100",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {}
+            }
+        },
+        "contentDensities": {
+"compact": true,
+"cozy": true
+        },
+        "models":{
+            "":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri":"mockdata/fruits.json",
+                "preload":false,
+                "settings":{}
+            },
+            "i18n":{
+                "type": "sap.ui.model.resource.ResourceModel",
+                "preload":true,
+            "settings": {
+                "bundleUrl":"i18n/i8n.properties"
+            }
+        }
+        }
+    }
+}

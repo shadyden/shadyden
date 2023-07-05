@@ -1,0 +1,45 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.m.layout.form" controllerName="mah.srm.ers.controller.View2" 
+xmlns:core="sap.ui.core">
+<Page title="View 2" showNavButton="true" navButtonPress="onBack">
+<content>
+<ObjectHeader title="{name}" intro="{healthBenifit}" icon="{imageURL}" number="{price}" numberUnit="{currency}"></ObjectHeader>
+<!-- <Button text="Back" press="onBack"></Button> -->
+<IconTabBar>
+<items> 
+<IconTabFilter icon="sap-icon://warning" text="More Info">
+<!-- <SimpleForm> -->
+<!-- <content> -->
+<Label text="Fruitname"></Label>
+<Text text="{name}"></Text>
+<Label text="Color"></Label>
+<Text text="{color}"></Text>
+<Label text="Price"></Label>
+<Text text="{price}"></Text>
+<Label text="isAvailable"></Label>
+<Text text="{status}"></Text>
+<!-- </f:content> -->
+<!-- </f:SimpleForm> -->
+</IconTabFilter>
+<IconTabFilter icon="sap-icon://supplier" text="Supppliers">
+<Table id="idTable">
+</Table>
+</IconTabFilter>
+<IconTabFilter icon="sap-icon://home" text="Cities">
+<Select items="{/cities}">
+<items>
+<core:Item key="{name}" text="{name}"></core:Item>
+</items>
+</Select>
+</IconTabFilter>
+</Items>
+</IconTabBar>
+</content>
+<footer>
+<Toolbar>
+<ToolbarSpacer / >
+<Button text="Save"  type="Accept" press="onSave"></Button>
+<Button text="Cancel" type="Cancel" press="onCancel"></Button>
+</Toolbar>
+</footer>
+</Page>
+</mvc:View>
